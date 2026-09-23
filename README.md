@@ -40,17 +40,23 @@ This repository is for better understanding and reproducibility fo our paper tit
 - **Cluster access:** Slurm-enabled HPC cluster (e.g., Alliance Canada or equivalent)
 - **Software:**
   - Bash
-  - Python 3.x
-  - Apptainer / Singularity
-  - dcm2niix
-  - fMRIPrep
-  - MRIQC
-  - Nilearn
-  - AFNI
-  - R
+  - Python 3.11.5
+  - Apptainer 1.3.5
+  - dcm2niix 1.0.20230411
+  - fMRIPrep 25.1.3
+  - MRIQC 24.0.2
+  - Nilearn 0.10.4
+  - NumPy 1.25.2
+  - SciPy 1.11.2
+  - Pandas 2.1.1
+  - Matplotlib 3.7.2
+  - Nibabel 5.3.2
+  - Statsmodels 0.14.5
+  - AFNI 23.3.02
+  - R 4.5.2
 - **Container images / modules:**
   - MRIQC container image
-  - fMRIPrep container or module
+  - fMRIPrep module on cluster
   - AFNI module on the cluster
 - **Data:**
   - Philips scanner DICOMs organized in a BIDS-style directory structure
@@ -78,7 +84,7 @@ This repository is for better understanding and reproducibility fo our paper tit
 
 ### 1. Scripts for behavioral analysis
 
-In order, run scripts 0 to 11. This will produce figure 2 as well as S2-14. Input data is a mix of redcap raw data CSVs as well as E-prime WTP files. 
+In order, run scripts 0 to 11. This will produce figure 2 as well as S2-14. Input data is a mix of redcap raw data CSVs as well as E-prime WTP and timing files. 
 This script is also required for the R code to produce tables s2-s4 :
 ```bash
 part_r2_analysis_func.R
@@ -275,12 +281,7 @@ bash 38_batch_whereami_analysis_v5_twl.sh
 
 ## References
 
-- Gorgolewski, K.J., Auer, T., Calhoun, V.D., Craddock, R.C., Das, S., Duff, E.P., Flandin, G., Ghosh, S.S., Glatard, T., Halchenko, Y.O., Handwerker, D.A., Hanke, M., Keator, D., Li, X., Michael, Z., Maumet, C., Nichols, B.N., Nichols, T.E., Pellman, J., Poline, J.-B., Rokem, A., Schaefer, G., Sochat, V., Triplett, W., Turner, J.A., Varoquaux, G., Poldrack, R.A. (2016). The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. Scientific Data, 3 (160044). doi:10.1038/sdata.2016.44
-- Li X, Morgan PS, Ashburner J, Smith J, Rorden C. (2016) J Neurosci Methods. 264:47-56.
-- Esteban O et al. (2017) PLoS ONE 12(9): e0184661.
-- Esteban O et al. (2019) Nat Methods 16, 111–116.
-- Abraham A et al. (2014) Front Neuroinform. 8:14.
-- Newton-Fenner A et al. (2023) [Economic value in the Brain: A meta-analysis...](https://doi.org/10.1177/20438087231160434)
+All references are listed at https://doi.org/10.64898/2026.08.19.745760 
 
 ---
 
